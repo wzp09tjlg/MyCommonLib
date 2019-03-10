@@ -24,4 +24,5 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     //源码依赖
     implementation project(':commonlib')
+    implementation project(':storagelib')
 }
