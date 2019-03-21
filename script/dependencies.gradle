@@ -1,0 +1,64 @@
+ext {
+    //这个文件是在以后编程中统一规范依赖的版本库
+
+    compileSdkVersion = 26
+    minSdkVersion = 16
+    targetSdkVersion = 26
+
+    constraintLayoutVersion = '1.1.3'
+    butterknifeVersion = '8.4.0'
+    leakCanaryVersion = '1.5'
+    rxJava2Version = '2.0.1'
+
+    junitVersion = '4.12'
+    roboelectricVersion = '3.0'
+    lintVersion = '26.1.0'
+    lintRulesVersion = '0.0.23-SNAPSHOT'
+
+    espressoVersion = '2.2.2'
+
+//    routerVersion = '1.1.0'
+    spiLoaderVersion = '0.0.2'
+    oneHybridVersion = '2.3.3'
+    animationVersion = '0.0.8-SNAPSHOT'
+
+    permissionHelperVersion = '0.1.4'
+    permissionCompilerVersion = '0.0.9'
+    butterknife = "com.jakewharton:butterknife:$butterknifeVersion"
+    butterknifeCompiler = "com.jakewharton:butterknife-compiler:$butterknifeVersion"
+
+    constraintLayout = "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
+
+    junit = "junit:junit:$junitVersion"
+
+    leakCanary = "com.squareup.leakcanary:leakcanary-android:$leakCanaryVersion"
+    leakCanaryNoOp = "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanaryVersion"
+
+
+    lintapi = "com.android.tools.lint:lint-api:$lintVersion"
+    lintchecks = "com.android.tools.lint:lint-checks:$lintVersion"
+    lint = "com.android.tools.lint:lint:$lintVersion"
+    lintTests = "com.android.tools.lint:lint-tests:$lintVersion"
+
+
+    espresso = "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
+
+    spiLoader = "com.didichuxing.foundation:spi-loader:$spiLoaderVersion"
+    oneHybrid = "com.xiaoju.nova:the-one-hybrid:$oneHybridVersion"
+    animation = "com.didi.sofa:animation:$animationVersion"
+
+    nova2Version = '1.1.38-SNAPSHOT-repo_rv'
+
+    skeletonRouter = "com.didi.soda:nova-skeleton-router:$nova2Version"
+    skeletonDsl = "com.didi.soda:nova-skeleton-dsl:$nova2Version"
+    skeletonDslCompiler = "com.didi.soda:nova-skeleton-dsl-compiler:$nova2Version"
+    skeletonNovaSdk = "com.didi.soda:nova-sdk:$nova2Version"
+    skeletonMVP = "com.didi.soda:nova-skeleton-mvp:$nova2Version"
+    skeletonRepo = "com.didi.soda:nova-skeleton-repo:$nova2Version"
+    skeletonGlide = "com.didi.soda:nova-skeleton-glide:$nova2Version"
+    skeletonSupport = "com.didi.soda:nova-skeleton-support:$nova2Version"
+    novaSupport = "com.didi.soda:nova-support:$nova2Version"
+    ruiWidget = "com.didi.soda.support:nova-rui-widget:0.0.0.38"
+    permissionHelper = "com.didi.sofa:permission-helper:$permissionHelperVersion"
+    permissionCompiler = "com.didi.sofa:permission-compiler:$permissionCompilerVersion"
+}

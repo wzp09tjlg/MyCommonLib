@@ -1,0 +1,27 @@
+
+project.afterEvaluate {
+    generateDependencies(file([project.rootDir,'app',
+                               'build', 'outputs', 'version'].join(File.separator)));
+}
+
+/**
+ * 将所有依赖的SDK版本信息记录到build/outputs/version文件夹下面
+ */
+def generateDependencies(File metaInfo) {
+    def versions = new File(metaInfo, 'versions')
+
+    if (!metaInfo.exists()) {
+        metaInfo.mkdirs()
+    }
+
+    List<String> deps = new ArrayList<String>()
+
+    project.configurations.compile.resolvedConfiguration.resolvedArtifacts.each {
+        deps.add("${it.moduleVersion.id} ${it.file.length()}")
+    }
+
+    Collections.sort(deps)
+    deps.add('')
+    versions.write(deps.join('\r\n'))
+}
+//这个认为是查看所有版本库依赖的三方库版本 在之后的开发过程中，对于gradle的学习 需要再学习这个
