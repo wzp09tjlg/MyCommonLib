@@ -1,0 +1,64 @@
+/////这个module 是准备写一个gradlew 的插件，主要是理解各种注解框架的实现原理
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+}
+repositories {
+    mavenCentral()
+}
+
+
+///发布代码
+
+//repositories {
+//    mavenCentral()
+//}
+//
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            //设置插件的GAV参数
+//            pom.groupId = 'com.wuzp.gradle.plugin'
+//            pom.artifactId = 'first'
+//            pom.version = '1.0.0'
+//            //文件发布到下面目录
+//            repository(url: uri('../repo'))
+//        }
+//    }
+//}
+
+////////
+apply plugin: 'maven'
+
+ext {
+    // 从Github上clone下来的项目的本地地址
+    GITHUB_REPO_PATH =  "/Users/wuzp/SelfWork/Update/Code/CodeMySelf/MyCommonLib"
+    // api 'com.audient:super_library:1.0.0'
+    PUBLISH_GROUP_ID = 'com.wuzp.gradle.plugin'
+    PUBLISH_ARTIFACT_ID = 'first'
+    PUBLISH_VERSION = '1.0.0'
+}
+
+uploadArchives {
+    repositories.mavenDeployer {
+        def deployPath = file(project.GITHUB_REPO_PATH)
+        repository(url: "file://${deployPath.absolutePath}")
+        pom.project {
+            groupId project.PUBLISH_GROUP_ID
+            artifactId project.PUBLISH_ARTIFACT_ID
+            version project.PUBLISH_VERSION
+        }
+    }
+}
+
+//// 源代码一起打包
+//task androidSourcesJar(type: Jar) {
+//    classifier = 'sources'
+//    from android.sourceSets.main.java.sourceFiles
+//}
+//artifacts {
+//    archives androidSourcesJar
+//}

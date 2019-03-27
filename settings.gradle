@@ -1,1 +1,1 @@
-include ':app' , ':commonlib',':storagelib'
+include ':app', ':baseplugin' , ':commonlib',':storagelib'
