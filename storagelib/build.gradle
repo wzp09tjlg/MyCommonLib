@@ -34,12 +34,12 @@ dependencies {
 apply plugin: 'maven'
 
 ext {
-    // 从Github上clone下来的项目的本地地址
-    GITHUB_REPO_PATH = "/Users/didi/SelfWork/updateSelf/myaar/MyCommonLib"
+    // 从Github上clone下来的项目的本地地址  这个地址在本地各不一样，所以在clone下来之后 需要根据不同的位置做修改
+    GITHUB_REPO_PATH = "/Users/wuzp/SelfWork/Update/Code/CodeMySelf/MyCommonLib"
     // api 'com.audient:super_library:1.0.0'
     PUBLISH_GROUP_ID = 'com.wuzp'
     PUBLISH_ARTIFACT_ID = 'storage_lib'
-    PUBLISH_VERSION = '1.0.0'
+    PUBLISH_VERSION = '1.0.1'
 }
 
 uploadArchives {
