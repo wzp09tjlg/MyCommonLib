@@ -23,6 +23,10 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     //源码依赖
-    implementation project(':commonlib')
-    implementation project(':storagelib')
+    //implementation project(':commonlib')
+    //implementation project(':storagelib')
+
+    //aar依赖
+    implementation 'com.wuzp:common_lib:1.0.3'
+    implementation 'com.wuzp:storage_lib:1.0.1'
 }
