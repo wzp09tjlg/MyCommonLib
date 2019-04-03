@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+//在project中引入plugin插件 然后在这里加入进来这个任务，点击执行的时候进行执行。当然也可以在某个点进行执行。比如falcon的代码检查 理论山就是这样搞的
+apply plugin: 'plugin.test'
 
 android {
     compileSdkVersion 26
